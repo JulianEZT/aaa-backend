@@ -7,6 +7,7 @@ export const getItems = (req: Request, res: Response) => {
     res.send({ list: [1,2,3] })
 } 
 
+
 export const getItem = (req: Request, res: Response) => {
     let username = 'a';
     let password = '1';
