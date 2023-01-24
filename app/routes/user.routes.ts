@@ -1,9 +1,8 @@
 import { Router } from "express";
-import { getItem, getItems } from "../controllers/users.controller";
+import { getItems } from "../controllers/users.controller";
+import { authMiddleWare } from "../middleware/auth.middleware";
 
 export const userRouter = Router();
-
-
 
 /**
  * get list
@@ -33,4 +32,7 @@ export const userRouter = Router();
    *        - username
    *        - password
    */
-userRouter.get('/users', getItems)
+userRouter.get('/users', authMiddleWare, getItems)
+
+
+

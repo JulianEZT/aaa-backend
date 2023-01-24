@@ -4,7 +4,7 @@
   "description": "backend accionistas - triple A",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app/routes/index.ts"
+    "start": "nodemon index.ts"
   },
   "author": "Mvm ingenieria de software",
   "license": "ISC",

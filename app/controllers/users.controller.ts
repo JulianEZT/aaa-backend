@@ -9,6 +9,7 @@ export const getItems = (req: Request, res: Response) => {
 
 
 export const getItem = (req: Request, res: Response) => {
+    console.log("entro getItem")
     let username = 'a';
     let password = '1';
 
