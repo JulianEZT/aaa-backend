@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { getItem } from "../controllers/users.controller";
+import { validateLogin } from '../middleware/validateData.middleware'
 
 export const loginRouter = Router();
 
@@ -41,4 +42,4 @@ export const loginRouter = Router();
    *        - username
    *        - password
    */
-loginRouter.get('/login', getItem)
+loginRouter.get('/login', validateLogin , getItem)
