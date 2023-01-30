@@ -22,7 +22,7 @@ export const getItem = (req: Request, res: Response) => {
         userLogin.username = userQuery;
         userLogin.password = passwordQuery;
         
-        const token: string = jwt.sign(userLogin, process.env.SECRET_KEY!, { expiresIn: 30000 })
+        const token: string = jwt.sign(userLogin, process.env.SECRET_KEY!, { expiresIn: '900s' })
         res.status(200).json(token)
 
     }else{
