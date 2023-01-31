@@ -6,7 +6,7 @@ export const authMiddleWare = (req: Request, res: Response, next: NextFunction) 
 
     const token = req.headers.authorization;
     let decoded = jwt_decode(token!);
-    console.log(decoded)
+
     if (!token) {
         next(new Error('no token provided'));
     }
